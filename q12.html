@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript - Projeto</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+<body>
+<header>
+  <div class="box">
+    <h2 class="titulo-principal">Questões JavaScript</h2>
+  </div>
+</header>
+
+  <main>
+  <section class="box">
+    <h2 class="titulos">Exercício</h2>
+    <ul id="mensagens-erro"></ul>
+
+<form id="form">
+  <div class="grupo">
+  <label for="nome" style="font-weight: bold">Questão 12: Multiplo?</label>
+  </div>
+
+  <div class="grupo">
+  <label for="n1">Número 1:</label>
+  <input id="n1" name="n1" type="number" placeholder="Digite um número" class="input-medio" onfocus="myFunction(this)"><br/>
+  </div>
+
+  <div class="grupo">
+  <label for="n2">Número 2:</label>
+  <input id="n2" name="n2" type="number" placeholder="Digite um número" class="input-medio" onfocus="myFunction(this)"><br/>
+  </div>
+
+  <button id="calcular" class="botao" onclick="num()">Calcular</button>
+
+</form>
+<p id="result" style="margin: 0 0 10px;"></p>
+
+<button id="calcular" class="bot" onclick="location.href='index.html'">Voltar</button>
+</section>
+</main>
+
+<script type="text/javascript">
+
+  var botao = document.querySelector("#calcular");
+  botao.addEventListener("click", function(event) {
+  event.preventDefault();
+  form.reset();
+  });
+
+function num(){
+  var n1 = parseFloat(document.getElementById("n1").value);
+  var n2 = parseFloat(document.getElementById("n2").value);
+  if (n1%n2 == 0) {
+        document.getElementById("result").innerHTML = "Número: Multiplo"
+    	}
+  else {
+        document.getElementById("result").innerHTML = "Número: Não Multiplo"
+       	}
+}
+
+function myFunction(x) {
+  x.style.background = "#ccb6f0";
+  }
+</script>
+</body>
+</head>
+
+</html>

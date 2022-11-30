@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript - Projeto</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+<body>
+<header>
+  <div class="box">
+    <h2 class="titulo-principal">Questões JavaScript</h2>
+  </div>
+</header>
+
+  <main>
+  <section class="box">
+    <h2 class="titulos">Exercício</h2>
+    <ul id="mensagens-erro"></ul>
+
+<form id="form">
+  <div class="grupo">
+  <label for="nome" style="font-weight: bold">Questão 17: Maior e menor Número?</label>
+  </div>
+
+  <div class="grupo">
+  <label for="n1">Número 1:</label>
+  <input id="n1" name="n1" type="number" placeholder="Digite um número" class="input-medio" onfocus="myFunction(this)"><br/>
+  </div>
+
+  <div class="grupo">
+  <label for="n2">Número 2:</label>
+  <input id="n2" name="n2" type="number" placeholder="Digite um número" class="input-medio" onfocus="myFunction(this)"><br/>
+  </div>
+
+  <div class="grupo">
+  <label for="n3">Número 3:</label>
+  <input id="n3" name="n3" type="number" placeholder="Digite um número" class="input-medio" onfocus="myFunction(this)"><br/>
+  </div>
+
+  <button id="calcular" class="botao" onclick="num()">Calcular</button>
+
+</form>
+<p id="resul" style="margin: 0 0 10px;"></p>
+<p id="result" style="margin: 0 0 10px;"></p>
+
+<button id="calcular" class="bot" onclick="location.href='index.html'">Voltar</button>
+</section>
+</main>
+
+<script type="text/javascript">
+
+  var botao = document.querySelector("#calcular");
+  botao.addEventListener("click", function(event) {
+  event.preventDefault();
+  form.reset();
+  });
+
+function num(){
+  var n1 = parseFloat(document.getElementById("n1").value);
+  var n2 = parseFloat(document.getElementById("n2").value);
+  var n3 = parseFloat(document.getElementById("n3").value);
+
+  if (n1 > n2 && n1 > n3) {
+      document.getElementById("resul").innerHTML = "O maior número é: " + n1;
+    	}
+  else if (n2 > n1 && n2 > n3) {
+      document.getElementById("resul").innerHTML = "O maior número é: " + n2;
+    	}
+  else if (n3 > n1 && n3 > n2) {
+      document.getElementById("resul").innerHTML = "O maior número é: " + n3;
+    	}
+  if (n1 < n2 && n1 < n3) {
+      document.getElementById("result").innerHTML = "O menor número é: " + n1;
+      }
+  else if (n2 < n1 && n2 < n3) {
+      document.getElementById("result").innerHTML = "O menor número é: " + n2;
+      }
+  else if (n3 < n1 && n3 < n2) {
+      document.getElementById("result").innerHTML = "O menor número é: " + n3;
+      }
+  else {
+      document.getElementById("resul").innerHTML = "Os números digitados são iguais"
+      }
+}
+
+function myFunction(x) {
+  x.style.background = "#ccb6f0";
+  }
+</script>
+</body>
+</head>
+
+</html>

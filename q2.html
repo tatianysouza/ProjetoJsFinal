@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript - Projeto</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+<body>
+<header>
+  <div class="box">
+    <h2 class="titulo-principal">Questões JavaScript</h2>
+  </div>
+</header>
+
+<main>
+<section class="box">
+  <h2 class="titulos">Exercício</h2>
+  <ul id="mensagens-erro"></ul>
+
+<form id="form">
+   <div class="grupo">
+   <label for="nome" style="font-weight: bold">Questão 2: Área e perímetro do quadrado</label>
+   </div>
+
+   <div class="grupo">
+   <label for="l1">Lado do quadrado:</label>
+   <input id="l1" name="l1" type="number" placeholder="Digite o lado do quadrado" class="input-medio" onfocus="myFunction(this)"><br/>
+   </div>
+
+   <button id="calcular" class="botao" onclick="lado()">Calcular</button>
+
+</form>
+<p id="result" style="margin: 0 0 10px;"></p>
+<p id="resulta" style="margin: 0 0 10px;"></p>
+
+<button id="calcular" class="bot" onclick="location.href='index.html'">Voltar</button>
+
+</section>
+</main>
+
+   <script type="text/javascript">
+
+     var botao = document.querySelector("#calcular");
+     botao.addEventListener("click", function(event) {
+       event.preventDefault();
+     	form.reset();
+     });
+
+function lado(){
+  var l1 = parseFloat(document.getElementById("l1").value);
+  var area = (l1 * l1);
+  var perimetro = (l1 * 4);
+  document.getElementById("result").innerHTML = "Área: " + area
+  document.getElementById("resulta").innerHTML = "Perimetro: " + perimetro
+}
+
+function myFunction(x) {
+  x.style.background = "#ccb6f0";
+  }
+</script>
+</body>
+</head>
+
+</html>
