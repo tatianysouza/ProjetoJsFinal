@@ -32,7 +32,7 @@
   <input id="n2" name="n2" type="number" placeholder="Digite o valor do cateto adjacente" class="input-medio" onfocus="myFunction(this)"><br/>
   </div>
 
-  <button id="calcular" class="botao" onclick="num()">Calcular</button>
+  <button id="calcular" class="botao" onclick="num7()">Calcular</button>
 
 </form>
 <p id="result" style="margin: 0 0 10px;"></p>
@@ -42,29 +42,7 @@
 </section>
 </main>
 
-   <script type="text/javascript">
-
-     var botao = document.querySelector("#calcular");
-     botao.addEventListener("click", function(event) {
-      event.preventDefault();
-     	form.reset();
-     });
-
-function num(){
-  var n1 = parseFloat(document.getElementById("n1").value);
-  var n2 = parseFloat(document.getElementById("n2").value);
-  var a = (n1**2);
-  var b = (n2**2);
-  var x = (a + b)
-  var hipotenusa = Math.sqrt(x);
-
-  document.getElementById("result").innerHTML = "Hipotenusa: " + hipotenusa
-}
-
-function myFunction(x) {
-  x.style.background = "#ccb6f0";
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </head>
 

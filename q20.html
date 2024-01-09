@@ -27,7 +27,7 @@
   <input id="n1" name="n1" type="number" placeholder="Digite um número correspondente a um mês" class="input-medio" onfocus="myFunction(this)"><br/>
   </div>
 
-  <button id="calcular" class="botao" onclick="num()">Verificar</button>
+  <button id="calcular" class="botao" onclick="num20()">Verificar</button>
 
 </form>
 <p id="result" style="margin: 0 0 10px;"></p>
@@ -36,62 +36,7 @@
 </section>
 </main>
 
-<script type="text/javascript">
-
-  var botao = document.querySelector("#calcular");
-  botao.addEventListener("click", function(event) {
-  event.preventDefault();
-  form.reset();
-  });
-
-function num(){
-  var n1 = parseFloat(document.getElementById("n1").value);
-
-  if (n1 == 1) {
-      document.getElementById("result").innerHTML = "Janeiro - 1° Trimestre";
-    	}
-  else if (n1 == 2) {
-      document.getElementById("result").innerHTML = "Fevereiro - 1° Trimestre";
-      }
-  else if (n1 == 3) {
-      document.getElementById("result").innerHTML = "Março - 1° Trimestre";
-    	}
-  else if (n1 == 4) {
-      document.getElementById("result").innerHTML = "Abril - 2° Trimestre";
-      }
-  else if (n1 == 5) {
-      document.getElementById("result").innerHTML = "Maio - 2° Trimestre";
-      }
-  else if (n1 == 6) {
-      document.getElementById("result").innerHTML = "Junho - 2° Trimestre";
-      }
-  else if (n1 == 7) {
-      document.getElementById("result").innerHTML = "Julho - 3° Trimestre";
-      }
-  else if (n1 == 8) {
-      document.getElementById("result").innerHTML = "Agosto - 3° Trimestre";
-      }
-  else if (n1 == 9) {
-      document.getElementById("result").innerHTML = "Setembro - 3° Trimestre";
-      }
-  else if (n1 == 10) {
-      document.getElementById("result").innerHTML = "Outubro - 4° Trimestre";
-      }
-  else if (n1 == 11) {
-      document.getElementById("result").innerHTML = "Novembro - 4° Trimestre";
-      }
-  else if (n1 == 12) {
-      document.getElementById("result").innerHTML = "Dezembro - 4° Trimestre";
-      }
-  else {
-      document.getElementById("resul").innerHTML = "Erro! Insira valores válidos."
-      }
-}
-
-function myFunction(x) {
-  x.style.background = "#ccb6f0";
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </head>
 

@@ -37,7 +37,7 @@
   <input id="n3" name="n3" type="text" placeholder="Digite um operador" class="input-medio" onfocus="myFunction(this)"><br/>
   </div>
 
-  <button id="calcular" class="botao" onclick="num()">Calcular</button>
+  <button id="calcular" class="botao" onclick="num19()">Calcular</button>
 
 </form>
 <p id="result" style="margin: 0 0 10px;"></p>
@@ -46,47 +46,7 @@
 </section>
 </main>
 
-<script type="text/javascript">
-
-  var botao = document.querySelector("#calcular");
-  botao.addEventListener("click", function(event) {
-  event.preventDefault();
-  form.reset();
-  });
-
-function num(){
-  var n1 = parseFloat(document.getElementById("n1").value);
-  var n2 = parseFloat(document.getElementById("n2").value);
-  var n3 = document.getElementById("n3").value;
-  var soma = (n1+n2);
-  var menos = (n1-n2);
-  var vezes = (n1*n2);
-  var dividir = (n1/n2);
-
-  if (n3 =="+") {
-      document.getElementById("result").innerHTML = n1 + "+" + n2 + "=" + soma;
-    	}
-  else if (n3 =="-") {
-      document.getElementById("result").innerHTML = n1 + "-" + n2 + "=" + menos;
-      }
-  else if (n3 =="*") {
-      document.getElementById("result").innerHTML = n1 + "*" + n2 + "=" + vezes;
-    	}
-  else if (n3 =="x") {
-      document.getElementById("result").innerHTML = n1 + "x" + n2 + "=" + vezes;
-      }
-  else if (n3 =="/") {
-      document.getElementById("result").innerHTML = n1 + "/" + n2 + "=" + dividir;
-      }
-  else {
-      document.getElementById("resul").innerHTML = "Erro! Insira valores válidos."
-      }
-}
-
-function myFunction(x) {
-  x.style.background = "#ccb6f0";
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </head>
 

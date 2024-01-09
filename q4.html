@@ -27,7 +27,7 @@
    <input id="n1" name="n1" type="number" placeholder="Digite o raio da circunferência" class="input-medio" onfocus="myFunction(this)"><br/>
    </div>
 
-   <button id="calcular" class="botao" onclick="num()">Calcular</button>
+   <button id="calcular" class="botao" onclick="num4()">Calcular</button>
 
 </form>
 <p id="result" style="margin: 0 0 10px;"></p>
@@ -38,27 +38,7 @@
 </section>
 </main>
 
-   <script type="text/javascript">
-
-     var botao = document.querySelector("#calcular");
-     botao.addEventListener("click", function(event) {
-      event.preventDefault();
-     	form.reset();
-     });
-
-function num(){
-  var n1 = parseFloat(document.getElementById("n1").value);
-  var area = (3.14*(n1**2));
-  var comprimento = ((2*3.14)*n1);
-
-  document.getElementById("result").innerHTML = "Área: " + area
-  document.getElementById("resulta").innerHTML = "Comprimento: " + comprimento
-}
-
-function myFunction(x) {
-  x.style.background = "#ccb6f0";
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </head>
 

@@ -38,26 +38,7 @@
 </section>
 </main>
 
-   <script type="text/javascript">
-
-     var botao = document.querySelector("#calcular");
-     botao.addEventListener("click", function(event) {
-       event.preventDefault();
-     	form.reset();
-     });
-
-function lado(){
-  var l1 = parseFloat(document.getElementById("l1").value);
-  var area = (l1 * l1);
-  var perimetro = (l1 * 4);
-  document.getElementById("result").innerHTML = "Área: " + area
-  document.getElementById("resulta").innerHTML = "Perimetro: " + perimetro
-}
-
-function myFunction(x) {
-  x.style.background = "#ccb6f0";
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </head>
 

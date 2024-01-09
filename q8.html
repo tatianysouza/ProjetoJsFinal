@@ -27,7 +27,7 @@
   <input id="n1" name="n1" type="number" placeholder="Digite as polegadas" class="input-medio" onfocus="myFunction(this)"><br/>
   </div>
 
-  <button id="calcular" class="botao" onclick="num()">Calcular</button>
+  <button id="calcular" class="botao" onclick="num8()">Calcular</button>
 
 </form>
 <p id="result" style="margin: 0 0 10px;"></p>
@@ -36,25 +36,7 @@
 </section>
 </main>
 
-<script type="text/javascript">
-
-  var botao = document.querySelector("#calcular");
-  botao.addEventListener("click", function(event) {
-  event.preventDefault();
-  form.reset();
-  });
-
-function num(){
-  var n1 = parseFloat(document.getElementById("n1").value);
-  var centimetros = (n1*2.54);
-
-  document.getElementById("result").innerHTML = "Centimetros: " + centimetros
-}
-
-function myFunction(x) {
-  x.style.background = "#ccb6f0";
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </head>
 

@@ -27,7 +27,7 @@
   <input id="n1" name="n1" type="number" placeholder="Digite o valor em metros" class="input-medio" onfocus="myFunction(this)"><br/>
   </div>
 
-  <button id="calcular" class="botao" onclick="num()">Calcular</button>
+  <button id="calcular" class="botao" onclick="num10()">Calcular</button>
 
 </form>
 <p id="resu" style="margin: 0 0 10px;"></p>
@@ -41,35 +41,7 @@
 </section>
 </main>
 
-<script type="text/javascript">
-
-  var botao = document.querySelector("#calcular");
-  botao.addEventListener("click", function(event) {
-  event.preventDefault();
-  form.reset();
-  });
-
-function num(){
-  var n1 = parseFloat(document.getElementById("n1").value);
-  var quilometros = (n1/1000);
-  var hectometro = (n1/100);
-  var decametro = (n1/10);
-  var decimetro = (n1*10);
-  var centimetro = (n1*100);
-  var milimetro = (n1*1000);
-
-  document.getElementById("resu").innerHTML = "Quilometros: " + quilometros
-  document.getElementById("resul").innerHTML = "Hectometros: " + hectometro
-  document.getElementById("result").innerHTML = "Decametros: " + decametro
-  document.getElementById("resulta").innerHTML = "Decimetros: " + decimetro
-  document.getElementById("resultad").innerHTML = "Centimetros: " + centimetro
-  document.getElementById("resultado").innerHTML = "Milímetros: " + milimetro
-}
-
-function myFunction(x) {
-  x.style.background = "#ccb6f0";
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </head>
 

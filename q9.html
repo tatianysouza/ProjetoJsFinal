@@ -27,7 +27,7 @@
    <input id="t1" name="t1" type="text" placeholder="Digite uma palavra" class="input-medio" onfocus="myFunction(this)"><br/>
    </div>
 
-   <button id="calcular" class="botao" onclick="cont()">Contar</button>
+   <button id="calcular" class="botao" onclick="cont9()">Contar</button>
 
 </form>
 <p id="result" style="margin: 0 0 10px;"></p>
@@ -37,25 +37,7 @@
 </section>
 </main>
 
-   <script type="text/javascript">
-
-     var botao = document.querySelector("#calcular");
-     botao.addEventListener("click", function(event) {
-       event.preventDefault();
-     	form.reset();
-     });
-
-function cont(){
-  var t1 = document.getElementById("t1").value;
-  var text = t1;
-  document.getElementById("result").innerHTML = "Tamanho: " + text.length + " letras";
-
-}
-
-function myFunction(x) {
-  x.style.background = "#ccb6f0";
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </head>
 
